@@ -1,0 +1,178 @@
+/* Reset all of the defaults to 0 so 
+that you can write your own CSS */
+/* DONT RELY ON BROWSER DEFAULTS */
+
+* {
+    border:none;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-size:16px;
+    background-color:black;
+    color:black;
+    font-family: "Trirong", serif;
+    background-repeat: no-repeat;
+    background-image: url(../images/image1.jpg);
+    opacity: unset;
+    
+}
+
+header > h1 {
+    text-align:center;
+    margin: auto;
+    padding: 50px;
+    background-color:#171214;
+    color: white;
+}
+
+main { text-align: center }
+
+article {
+    border-radius: 4px;
+    border-style:dashed;
+    border-color: white;
+    border: 8px solid gray;
+    display:inline-block;
+    margin-left: 12px;
+    margin-right:12px;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin: 10px 12px 10px 12px;
+    margin: 10px 12px;
+    text-align:left;
+    width: 25%;
+}
+
+article > h2 {
+    color: grey;
+    padding: 10px 8px;
+}
+
+ul {
+    list-style-type:none;
+    
+}
+
+article:first-of-type {
+    border-color:rgba(229,146,80,255);
+}
+
+article:first-of-type h2 {
+    color:rgba(229,146,80,255);
+}
+
+#inprogress { border-color: red; }
+#inprogress h2 { color: red; }
+#inprogress {background-color: white;}
+
+#done { border-color: #3F4F47; }
+#done h2 { color: #3F4F47; }
+#done {background-color: white;}
+
+ul li {
+    padding: 6px 8px;
+    text-transform:uppercase;
+}
+#todo {background-color: white;}
+#todo
+li:nth-child(odd) {
+    background-color:rgba(229,146,80,255);
+}
+
+
+#inprogress 
+li:nth-child(odd) {
+    background-color:rgba(255,0,0,0.5   );
+}
+#inprogress
+li input[type="checkbox"]:checked + label
+ {
+    background-color: green;
+  }
+
+#done 
+li:nth-child(odd) {
+    background-color:#3F4F47;
+}
+#done
+li input[type="checkbox"]:checked + label::after
+ {
+    background-color: green;
+    color:green;
+    margin-left:auto;
+  }
+  #done
+  li input[type="checkbox"]:checked + label
+ {
+    background-color: green;
+  }
+
+
+article {
+    width: 100%;
+    margin:10px 0px;
+}
+
+main {
+    margin: 0 12px;
+}
+
+@media(min-width:960px) {
+    article {
+        width:25%;
+        margin:10px 12px;
+    }
+
+    main {margin: 0;}
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 70px 2px;
+  cursor: pointer;
+  border-radius: 30px;
+  border-style: solid;
+} 
+
+ button:hover
+{
+        background-color: #3e8e41;      
+}
+
+.checkbox-list
+    li:hover 
+{
+    background-color: #007991;
+}
+  
+.checkbox-list
+li label:hover 
+{
+    cursor: pointer;
+}
+
+#todo li:nth-child(odd):hover{
+    background-color: #007991;
+  }
+  #inprogress li:nth-child(odd):hover {
+    background-color: #007991;
+  }
+  
+#done li:nth-child(odd):hover{
+    background-color: #007991;
+}
+
+#done input[type='checkbox']:checked + label {
+	color: #666;
+	text-decoration: line-through;
+}
